@@ -279,7 +279,7 @@ else
         echo -e " Build time: ${GREEN_COLOR}$(( SEC / 3600 ))h,$(( (SEC % 3600) / 60 ))m,$(( (SEC % 3600) % 60 ))s${RES}"
         # OTA json
         if [ "$1" = "rc" ]; then
-            FW_URL=$(curl -s https://api.github.com/repos/sbwml/builder/releases | grep browser_download_url | grep fw.json | head -1 | awk '{print $2}' | sed 's/\"//g')
+            FW_URL=$(curl -s https://api.github.com/repos/kenzok8/Bulid_Wrt/releases | grep browser_download_url | grep fw.json | head -1 | awk '{print $2}' | sed 's/\"//g')
             curl -Lso ota.json $FW_URL || exit 0
             VERSION=$(sed 's/v//g' version.txt)
             if [ "$model" = "nanopi-r4s" ]; then
