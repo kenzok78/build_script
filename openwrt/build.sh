@@ -17,9 +17,9 @@ export isCN=`echo $ip_info | grep -Po 'country_code\":"\K[^"]+'`;
 
 # init url
 if [ "$isCN" = "CN" ]; then
-    export mirror=init.cooluc.com
+    export mirror=raw.githubusercontent.com/kenzok78/build_script/main
 else
-    export mirror=init2.cooluc.com
+    export mirror=raw.githubusercontent.com/kenzok78/build_script/main
 fi
 export gitea=git.cooluc.com
 
